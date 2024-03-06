@@ -4,3 +4,5 @@
  const dataJSON = dataBuffer.toString();
  const data =JSON.parse(dataJSON)
  console.log(data);
+ data.name = "Batman";
+ fs.writeFileSync('1-json.json',JSON.stringify(data))
