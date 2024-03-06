@@ -1,13 +1,12 @@
-const http = require('http');
+const chalk = require('chalk')
+const getNotes = require('./notes.js')
 
-function rqListener(req,res){
-console.log(req);
+const command = process.argv[2]
+
+console.log(process.argv)
+
+if (command === 'add') {
+    console.log('Adding note!')
+} else if (command === 'remove') {
+    console.log('Removing note!')
 }
-//http.createServer() executes rqListener for every incoming requests
-const server = http.createServer(rqListener)
-
-// Can also pass anonymous function to createServer()
-// http.createServer(function (req,res){
-// })
-
-server.listen(3000);
